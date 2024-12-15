@@ -1,15 +1,22 @@
 body {
-    background: rgb(48, 48, 48);
+    background: #bdb7b7;
+    font-family: 'Poppins';
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 .slider {
     position: relative;
-    padding-bottom: 40px;
+    margin-top: 70px;
+    
 }
 
 .slider__item {
-    background-color: #918f8f;
-    opacity: 0.4;
+    background-color: #fff;
+    box-shadow: 4px 4px 8px 0px rgba(255, 255, 255, 0.25);
 }
 
 .slider__item-content {
@@ -54,25 +61,32 @@ body {
 
 .slick-arrow {
     position: absolute;
-    top: 50%;
     z-index: 10;
     font-size: 0;
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
     border: none;
     cursor: pointer;
 }
 
 .slick-arrow.slick-prev {
-    top: 100%;
-    right: 50%;
+    top: 43%;
+    left: -5%;
     background: url('../images/prev.png') 0 0 / 100% no-repeat;
+    opacity: 0.2;
+}
+
+.slick-arrow.slick-prev:hover,
+.slick-arrow.slick-next:hover {
+    opacity: 1;
 }
 
 .slick-arrow.slick-next {
-    top: 100%;
-    left: 50%;
+    top: 43%;
+    right:  -5%;
     background: url('../images/next.png') 0 0 / 100% no-repeat;
+    opacity: 0.2;
+    
 }
 
 .slick-dots {
@@ -80,26 +94,27 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 0;
 }
 
 .slick-dots li {
     list-style: none;
 }
 
-.slick-dots li.slick-active button {
-    background-color: #000000;
-    height: 30px;
-    width: 30px;
-    color: #fff;
-}
-
 .slick-dots button {
-    border: none;
+    font-family: 'Poppins';
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    font-size:0 ;
+    height: 25px;
+    width: 25px;
     cursor: pointer;
-    background-color: #fff;
 }
 
-.slick-center {
-    opacity: 1;
+.slick-dots li.slick-active button {
+    background-color: #fff;
 }
